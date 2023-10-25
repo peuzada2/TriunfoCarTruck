@@ -109,6 +109,11 @@ ul {
 
 .item > a {
   color: white;
+  transition: all ease-in-out .4s;
+}
+
+.item:hover > a {
+  color: rgb(255, 251, 0);
 }
 
 main {
