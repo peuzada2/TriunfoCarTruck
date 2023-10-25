@@ -1,0 +1,634 @@
+@import url('https://fonts.smoothgoogleapis.com/css2?family=Roboto&display=swap');
+
+
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+span {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+i {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-links {
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-links:hover {
+    color: yellow;
+
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+  height: 50px;
+  position: fixed;
+  background-color: #12142242;
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+#header2 {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  position: fixed;
+  margin: 20px;
+}
+
+#header1 > ul {
+  display: flex;
+  font-family: 'PT Sans', sans-serif;
+  gap: 15;
+  list-style: none;
+  padding: none;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+
+.hamburguer {
+  display: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.logo-imagem {
+    display: flex;
+    background-image: url(../imagens/365992999_671284684939924_3497446865742478943_n.jpg);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navegacao1 {
+  display: flex;
+  align-items: center;
+}
+
+.item > a {
+  color: white;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url(../imagens/background-main.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 70vh;
+}
+
+.texto-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 50%;
+    color: white;
+    margin-left: 50px;
+    animation-name: imgb;
+    animation-duration: 2s;
+  }
+  
+  @keyframes imgb {
+      from {
+          transform: translateX(-30px);
+          opacity: 0%;
+      }
+      to {
+          transform: translateX(0);
+          opacity: 100%;
+      }
+  }
+  
+#imgb {
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 500px;
+  height: 500px;
+  background-image: url(imagens/peu.png);
+  animation-name: imgb;
+  animation-delay: .2s;
+}
+
+
+.texto-main > h1 {
+    font-size: 4em;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.texto-main > p {
+    font-size: 1.5em;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.botao-contato {
+    border: none;
+    background-color: yellow;
+    border-radius: 20px;
+    padding: 10px;
+    height: 40px;
+    width: 200px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.Beneficios {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.text-beneficios {
+    width: 50%;
+    text-align: center;
+    font-size: 1.28em;
+    color: #030b17;
+    font-weight: bolder;
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 88%;
+    position: relative;
+  }
+  .wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper i:first-child{
+    left: -22px;
+  }
+  .wrapper i:last-child{
+    right: -22px;
+  }
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .carousel .card .img {
+    background: #8B53FF;
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+  }
+  .card .img img {
+    width: 300px;
+    height: 200px;
+    border-radius: 40px;
+    object-fit: cover;
+    border: 4px solid #fff;
+  }
+  .carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+  }
+  .carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+  }
+
+
+  .quem-somos {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    background-color: #030b17;
+  }
+
+  .text-quem-somos {
+    display: flex;
+    width: 50%;
+    flex-direction: column; 
+    color: white;
+    margin:0px 0px 0px 50px;
+}
+
+.text-quem-somos > h1 {
+    margin: 0;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    width: 90%;
+}
+
+.text-quem-somos > p {
+    margin: 0;
+    font-size: 1.2em;
+    opacity: 90%;
+    width: 80%;
+}
+
+.triunfo-link {
+    color: yellow;
+}
+
+.hillux-png {
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 500px;
+    width: 50%;
+    background-image: url(../imagens/comprar-srx-4x4-automatico_a0d05b40c8.png);
+}
+
+
+.serviços {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card-servicos {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 500px;
+    background-color: #030b17;
+    color: white;
+    margin: 40px 0px;
+    padding: 40px 0px;
+    border-radius: 50px;
+  }
+  
+  .card-servicos > h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .listas {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+  }
+
+  .lista-servicos {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+}
+
+
+#botao-contato2 {
+    margin-top: 0px;
+    padding-top: 10px;
+}
+  @media screen and (max-width: 1120px) {
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+
+    .sidebar {
+      display: flex;
+      min-height: 100vh;
+      width: 100%;
+  }
+
+    header {
+      width: 100%;
+      backdrop-filter: blur(0px);
+      background: none;
+  }
+
+  #header1 {
+      display: none;
+  }
+
+  #header2 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      height: 100vh;
+      top: 0;
+      position: absolute;
+      background-color: #363636;
+      margin: 0;
+      max-width: 300px;
+      left: -300px;
+      transition: 0.2s linear;
+     }
+
+  #header2.is-active {
+      left: 0;
+  }
+
+  .logo {
+      margin-top: 20px;
+      padding-left: 10px;
+  }
+
+  .hamburguer > span,
+  .hamburguer > span::before,
+  .hamburguer > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      border-radius: 99px;
+      background-color: #d6d6d6;
+      transition-duration: .25s;
+  }
+
+  .hamburguer > span:before {
+      content: '';
+      top: -15px;
+  }
+
+  .hamburguer > span::after {
+      content: '';
+      top: 15px;
+  }
+
+  .menu.is-active .hamburguer > span {
+      transform: rotate(45deg);
+  }
+
+  .menu.is-active .hamburguer > span::before {
+      top: 0;
+      transform: rotate(0deg);
+  }
+
+  .menu.is-active .hamburguer > span::after {
+      top: 0;
+      transform: rotate(90deg);
+  }
+
+  .menu {
+      display: block;
+      position: absolute;
+      top: 2.5rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      z-index: 1006;
+  }
+
+  .hamburguer {
+      display: block;
+  }
+
+  .menu:hover .card-cliente {
+      border: 1px solid red;
+  }
+  
+  .hamburguer{
+      display: block;
+      left: 40%;
+      position: relative;
+      top: calc(-50% - 2px);
+      transform: translate(-50%, 50%);
+      width: 60px;
+      height: 60px;
+      font-size: 3em;
+
+  }
+
+  
+  #sidebar {
+      border: none;
+      display: flex;
+      width: 100%;
+      height: 80%;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-left: 10px;
+      margin: 0;
+  }
+
+  .item {
+      display: block;
+      color: white;
+      transition: 0.2s;
+      padding: .8em 0px 1em 0px;
+      width: calc(100% - 15px);
+  }
+
+  .item > a {
+      color: white;
+  }
+
+  .item:hover, .item.is-active {
+      color: #a9def9;
+      border-right: 5px solid #a9def9;
+  }
+
+  #li1, #li2, #li3, #li4, #li5 {
+      font-size: 1.5em;
+      text-transform: uppercase;
+  }
+  
+
+    .quem-somos {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .hillux-png{
+        width: 100%;
+        height: 500px;
+    }
+
+    .text-quem-somos, .text-quem-somos > p{
+        width: 90%;
+        text-align: start;
+        align-items: center;
+        margin: 0;
+    }
+
+    .text-beneficios{
+        width: 90%;
+        text-align: start;
+    }
+
+    .text-beneficios > h1 {
+        font-size: 3em;
+        margin-bottom: 0px;
+    }
+
+    .text-beneficios > p > strong {
+      color: rgb(0, 157, 255);
+  }
+  }
+  @media screen and (max-width: 750px) {
+    .wrapper .carousel {
+      grid-auto-columns: 100%;
+    }
+
+    .hillux-png{
+        width: 100%;
+        height: 350px;
+    }
+
+    .card .img img {
+        width: 200px;
+        height: 200px;
+        border-radius: 40px;
+        object-fit: cover;
+        border: 4px solid #fff;
+      }
+
+    .text-beneficios > h1 {
+        font-size: 2em;
+    }
+
+    .text-beneficios > p {
+      font-size: .8em;
+  }
+
+
+    .text-quem-somos > h1 {
+        font-size: 2em;
+    }
+
+    .texto-main {
+        width: 100%;
+    }
+
+    .texto-main > h1 {
+        font-size: 2.5em;
+
+    }
+
+    .serviços {
+        width: 100%;
+    }
+
+    .listas {
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mensalidade {
+      width: 90%;
+    }
+
+    .card-servicos {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+    }
+
+    .card-servicos > h1 {
+      width: 95%;
+    }
+
+    .lista-servicos {
+        width: 100%;
+    }
+  }
+
